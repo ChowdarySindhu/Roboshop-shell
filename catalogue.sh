@@ -10,8 +10,9 @@ cd /app
 unzip /tmp/catalogue.zip
 cd /app
 npm install
-systemctl daemon-reload
+
 yum install mongodb-org-shell -y
+systemctl daemon-reload
 mongo --host mongodb.sgdevrobo.online </app/schema/catalogue.js
 systemctl enable catalogue
 systemctl restart catalogue
