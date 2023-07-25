@@ -23,7 +23,7 @@ cd /app
 echo ">>>>>> installing dependencies <<<<<<<<<<<"
 npm install
 
-echo -e "\e[34m installing mongodb client \e[0m"
+echo -e "\e[34m installing mongodb \e[0m"
 yum install mongodb-org-shell -y
 
 echo ">>>>>> loading catalogue schema <<<<<<<<<<<"
