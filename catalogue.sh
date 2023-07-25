@@ -1,4 +1,4 @@
-echo ">>>>>>>>>> create catalogue service <<<<<<<<<<<<<<<<<<"
+echo -e "\e[31m create catalogue service \e[0m"
 
 cp catalogue.service /etc/systemd/system/catalogue.service
 
