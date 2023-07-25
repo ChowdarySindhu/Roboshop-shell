@@ -10,6 +10,9 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 echo ">>>>>> useradd roboshop <<<<<<<<<<<"
 useradd roboshop
+echo -e "\e[33m removing the content and reinstalling \e[0m"
+rm -rf /app
+
 echo ">>>>>> creating app directory <<<<<<<<<<<"
 mkdir /app
 echo ">>>>>> downloading roboshop artifacts <<<<<<<<<<<"
