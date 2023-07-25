@@ -15,7 +15,7 @@ mkdir /app
 echo ">>>>>> downloading roboshop artifacts <<<<<<<<<<<"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 
-echo ">>>>>> unzip the files <<<<<<<<<<<"
+echo -e "\e[34m unziping the files \e[0m"
 cd /app
 unzip /tmp/catalogue.zip
 cd /app
@@ -23,7 +23,7 @@ cd /app
 echo ">>>>>> installing dependencies <<<<<<<<<<<"
 npm install
 
-echo ">>>>>> installing mongodb client <<<<<<<<<<<"
+echo -e "\e[34m installing mongodb client \e[0m"
 yum install mongodb-org-shell -y
 
 echo ">>>>>> loading catalogue schema <<<<<<<<<<<"
