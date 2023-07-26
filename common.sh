@@ -1,4 +1,4 @@
-nodejs(){
+func_nodejs(){
   log=/tmp/roboshop.log
 echo -e "\e[31m create ${component} service \e[0m"
 
@@ -38,4 +38,32 @@ echo -e "\e[31m start ${component} service \e[0m"
 systemctl daemon-reload
 systemctl enable ${component}
 systemctl restart ${component}
+}
+
+func_java(){
+  echo -e "\e[31m start ${component} service \e[0m"
+  cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
+  echo -e "\e[31m installing maven \e[0m"
+  yum install maven -y &>>${log}
+  echo -e "\e[31m adding user \e[0m"
+  useradd roboshop &>>${log}
+  echo -e "\e[31m creating app directory \e[0m"
+  mkdir /app &>>${log}
+  echo -e "\e[31m downloading artifacts \e[0m"
+  curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip &>>${log}
+  echo -e "\e[34m unziping the files \e[0m"
+  cd /app &>>${log}
+  unzip /tmp/${component}.zip &>>${log}
+  cd /app &>>${log}
+  echo -e "\e[34m cleaning maven package \e[0m"
+  mvn clean package &>>${log}
+  echo -e "\e[34m moving the ${component} files \e[0m"
+  mv target/${component}-1.0.jar ${component}.jar &>>${log}
+  echo -e "\e[34m uinstalling mysql files \e[0m"
+  yum install mysql -y &>>${log}
+  echo -e "\e[34m loading the schema files \e[0m"
+  mysql -h mysql.sgdevrobo.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
+  systemctl enable ${component} &>>${log}
+  systemctl restart ${component} &>>${log}
+
 }
