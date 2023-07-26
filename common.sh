@@ -41,6 +41,7 @@ systemctl restart ${component}
 }
 
 func_java(){
+  log=/tmp/roboshop.log
   echo -e "\e[31m start ${component} service \e[0m"
   cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
   echo -e "\e[31m installing maven \e[0m"
