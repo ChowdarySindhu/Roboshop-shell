@@ -31,7 +31,7 @@ npm install &>>${log}
 echo -e "\e[34m installing mongodb \e[0m"
 yum install mongodb-org-shell -y &>>${log}
 
-echo -e "\e[31m loading ${component} schema \e[0m"
+echo -e "\e[31m loading catalogue schema \e[0m" | tee -a /tmp/roboshop.log
 mongo --host mongodb.sgdevrobo.online </app/schema/${component}.js &>>${log}
 echo -e "\e[31m start ${component} service \e[0m"
 systemctl daemon-reload
