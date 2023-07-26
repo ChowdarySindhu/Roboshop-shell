@@ -32,7 +32,7 @@ echo -e "\e[34m installing mongodb \e[0m"
 yum install mongodb-org-shell -y &>>${log}
 
 echo -e "\e[31m loading ${component} schema \e[0m"
-mongo --host mongodb.sgdevrobo.online </app/schema ${component}.js &>>${log}
+mongo --host mongodb.sgdevrobo.online </app/schema/${component}.js &>>${log}
 echo -e "\e[31m start ${component} service \e[0m"
 systemctl daemon-reload
 systemctl enable ${component}
