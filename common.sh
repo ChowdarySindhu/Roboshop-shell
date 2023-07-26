@@ -2,7 +2,7 @@ nodejs(){
   log=/tmp/roboshop.log
 echo -e "\e[31m create ${component} service \e[0m"
 
-cp ${component}.service /etc/systemd/system ${component}.service &>>${log}
+cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
 
 echo -e "\e[31m create mongodb repos \e[0m"
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>>${log}
@@ -18,11 +18,11 @@ rm -rf /app &>>${log}
 echo -e "\e[31m creating app directory \e[0m"
 mkdir /app &>>${log}
 echo -e "\e[31m downloading roboshop artifacts \e[0m"
-curl -o /tmp ${component}.zip https://roboshop-artifacts.s3.amazonaws.com ${component}.zip &>>${log}
+curl -o /tmp ${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip &>>${log}
 
 echo -e "\e[34m unziping the files \e[0m"
 cd /app
-unzip  /tmp ${component}.zip &>>${log}
+unzip  /tmp/${component}.zip &>>${log}
 cd /app
 
 echo -e "\e[31m installing dependencies \e[0m"
@@ -33,6 +33,7 @@ yum install mongodb-org-shell -y &>>${log}
 
 echo -e "\e[31m loading catalogue schema \e[0m" | tee -a /tmp/roboshop.log
 mongo --host mongodb.sgdevrobo.online </app/schema/${component}.js &>>${log}
+
 echo -e "\e[31m start ${component} service \e[0m"
 systemctl daemon-reload
 systemctl enable ${component}
