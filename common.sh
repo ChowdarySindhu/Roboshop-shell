@@ -1,5 +1,5 @@
 nodejs(){
-
+LOG=${log}
 echo -e "\e[31m create ${component} service \e[0m"
 
 cp ${component}.service /etc/systemd/system ${component}.service &>>${log}
