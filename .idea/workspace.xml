@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d56fe1-9e4e-430d-a4c8-e0ed15dbedcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Roboshop-Terraform/env-dev/main.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/../Roboshop-Terraform/env-dev/main.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Roboshop-shell.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Roboshop-shell.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e1d56fe1-9e4e-430d-a4c8-e0ed15dbedcf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +58,7 @@
       <workItem from="1690993790553" duration="79000" />
       <workItem from="1694708970317" duration="500000" />
       <workItem from="1694709486244" duration="6000" />
+      <workItem from="1694714127974" duration="11000" />
     </task>
     <servers />
   </component>
