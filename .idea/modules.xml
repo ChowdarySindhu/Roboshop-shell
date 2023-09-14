@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../RoboShop-Ansible/.idea/RoboShop-Ansible.iml" filepath="$PROJECT_DIR$/../RoboShop-Ansible/.idea/RoboShop-Ansible.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Roboshop-Terraform/.idea/Roboshop-Terraform.iml" filepath="$PROJECT_DIR$/../Roboshop-Terraform/.idea/Roboshop-Terraform.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Roboshop-shell.iml" filepath="$PROJECT_DIR$/.idea/Roboshop-shell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learn-terraform/.idea/learn-terraform.iml" filepath="$PROJECT_DIR$/../learn-terraform/.idea/learn-terraform.iml" />
     </modules>
   </component>
 </project>
